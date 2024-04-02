@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SqlScripts\0001-CreateVehicleMaketable.sql" />
+    <None Remove="SqlScripts\0004-SeedDataInTables.sql" />
+    <None Remove="SqlScripts\0005-SeedDataInTable2.sql" />
+    <None Remove="SqlScripts\0006-DropVehicleModelTable.sql" />
+    <None Remove="SqlScripts\0007-CreateNewVehicleModelTable.sql" />
+    <None Remove="SqlScripts\0008-CreatedOwnerTable.sql" />
+    <None Remove="SqlScripts\0009-SeedingOwnerData.sql" />
+    <None Remove="SqlScripts\0010-CreateVehicleModelOwnerTable.sql" />
+    <None Remove="SqlScripts\0011-AlterTableVehicleModelOwner.sql" />
+    <None Remove="SqlScripts\0012-SeedingVehicleOwnerTable.sql" />
+    <None Remove="SqlScripts\0013-AddConstraintVehicleModel.sql" />
+    <None Remove="SqlScripts\0014-AddConstraintVehicleModelOwner.sql" />
+    <None Remove="SqlScripts\0015-VehicleModelView.sql" />
+    <None Remove="SqlScripts\AddVehicleModelOwnerColumn.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SqlScripts\0001-CreateVehicleMaketable.sql" />
+    <EmbeddedResource Include="SqlScripts\0004-SeedDataInTables.sql" />
+    <EmbeddedResource Include="SqlScripts\0005-SeedDataInTable2.sql" />
+    <EmbeddedResource Include="SqlScripts\0006-DropVehicleModelTable.sql" />
+    <EmbeddedResource Include="SqlScripts\0007-CreateNewVehicleModelTable.sql" />
+    <EmbeddedResource Include="SqlScripts\0008-CreatedOwnerTable.sql" />
+    <EmbeddedResource Include="SqlScripts\0009-SeedingOwnerData.sql" />
+    <EmbeddedResource Include="SqlScripts\0010-CreateVehicleModelOwnerTable.sql" />
+    <EmbeddedResource Include="SqlScripts\0011-AlterTableVehicleModelOwner.sql" />
+    <EmbeddedResource Include="SqlScripts\0012-SeedingVehicleOwnerTable.sql" />
+    <EmbeddedResource Include="SqlScripts\0013-AddConstraintVehicleModel.sql" />
+    <EmbeddedResource Include="SqlScripts\0014-AddConstraintVehicleModelOwner.sql" />
+    <EmbeddedResource Include="SqlScripts\0015-VehicleModelView.sql" />
+    <EmbeddedResource Include="SqlScripts\AddVehicleModelOwnerColumn.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.35" />
+    <PackageReference Include="dbup-postgresql" Version="5.0.40" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="BCL\Models\" />
+  </ItemGroup>
+
+</Project>
